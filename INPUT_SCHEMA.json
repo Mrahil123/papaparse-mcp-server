@@ -1,0 +1,58 @@
+{
+  "title": "Papa Parse MCP Server Input",
+  "description": "Configuration for CSV parsing, unparsing, and validation operations",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "operation": {
+      "title": "Operation",
+      "type": "string",
+      "description": "Type of operation to perform",
+      "enum": ["parse", "unparse", "validate"],
+      "default": "parse",
+      "editor": "select"
+    },
+    "csvData": {
+      "title": "CSV Data",
+      "type": "string",
+      "description": "CSV content as string OR URL to fetch CSV from",
+      "editor": "textarea",
+      "example": "name,age,city\nJohn,30,NYC\nJane,25,LA"
+    },
+    "jsonData": {
+      "title": "JSON Data",
+      "type": "array",
+      "description": "Array of objects to convert to CSV (for unparse operation)",
+      "editor": "json",
+      "example": [
+        {"name": "John", "age": 30, "city": "NYC"},
+        {"name": "Jane", "age": 25, "city": "LA"}
+      ]
+    },
+    "options": {
+      "title": "Papa Parse Options",
+      "type": "object",
+      "description": "Advanced Papa Parse configuration options",
+      "editor": "json",
+      "prefill": {
+        "header": true,
+        "dynamicTyping": true,
+        "skipEmptyLines": true,
+        "delimiter": "",
+        "newline": "",
+        "quoteChar": "\"",
+        "escapeChar": "\"",
+        "comments": false,
+        "trimHeaders": true
+      },
+      "example": {
+        "header": true,
+        "dynamicTyping": true,
+        "skipEmptyLines": true,
+        "delimiter": ",",
+        "encoding": "UTF-8"
+      }
+    }
+  },
+  "required": []
+}
