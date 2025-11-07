@@ -1,0 +1,29 @@
+{
+  "name": "papaparse-mcp-server",
+  "version": "1.0.0",
+  "description": "Cloud-hosted Papa Parse MCP server for CSV processing via Apify",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Run actor locally or on Apify platform\""
+  },
+  "keywords": [
+    "csv",
+    "parser",
+    "papaparse",
+    "mcp",
+    "data-processing",
+    "apify"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "apify": "^3.1.0",
+    "papaparse": "^5.4.1",
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
